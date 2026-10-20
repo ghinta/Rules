@@ -1,9 +1,3 @@
----
-name: Compliance and Governance Rules
-alwaysApply: false
-description: Apply to privacy, sensitive data, retention, licensing, external services, auditability, regulated obligations, and organizational governance.
----
-
 # Compliance and Governance Rules
 
 These rules guide engineering decisions; they do not replace qualified legal, privacy, security, or regulatory review.
@@ -13,7 +7,7 @@ These rules guide engineering decisions; they do not replace qualified legal, pr
 - MUST follow applicable documented legal, contractual, regulatory, organizational, and repository requirements.
 - MUST preserve required approval, review, audit, retention, and change-control processes.
 - MUST surface missing, conflicting, or ambiguous requirements when they materially affect implementation; MUST NOT invent legal obligations, retention periods, or certification levels.
-- MUST NOT claim compliance or formal approval based solely on generated code or AI assessments.
+- MUST NOT claim compliance or formal approval without appropriate evidence and authorized review.
 
 ## Privacy & Data Governance
 
@@ -23,7 +17,6 @@ These rules guide engineering decisions; they do not replace qualified legal, pr
 - MUST minimize personal or confidential data in logs, telemetry, URLs, caches, error messages, and test data; SHOULD use synthetic, anonymized, or appropriately pseudonymized test data.
 - SHOULD prefer privacy-preserving defaults and avoid unnecessary persistent storage or optional telemetry.
 - MUST obtain required approval before introducing third-party trackers, analytics, external AI services, or data processors; MUST keep restricted data within approved systems and transfer paths and explicitly approve new destinations.
-- MUST NOT disclose proprietary code, credentials, personal data, or confidential information to unapproved external services.
 
 ## Third-Party Software & Licensing
 
@@ -47,9 +40,3 @@ These rules guide engineering decisions; they do not replace qualified legal, pr
 - SHOULD keep relevant software components maintainable and inventories or evidence current where required.
 - MUST follow documented accessibility, records-management, export-control, and sector-specific obligations and verify them at an appropriate level.
 - MUST escalate material regulatory or contractual interpretations for qualified review rather than guessing.
-
-## AI-Assisted Engineering
-
-- MUST treat AI-generated code, documentation, and assessments as unverified work requiring appropriate review.
-- MUST preserve human accountability for legal, privacy, licensing, security, and regulatory decisions.
-- MUST NOT present AI-generated assessments as legal advice, certification, or proof of compliance.

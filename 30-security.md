@@ -1,9 +1,3 @@
----
-name: Secure Development Rules
-alwaysApply: true
-description: Framework-agnostic security baseline aligned with NIST SSDF, OWASP, and OpenSSF practices.
----
-
 # Secure Development Rules
 
 Security MUST be enforced by default at the appropriate trust boundary. Existing protections MUST NOT be weakened for convenience; exceptions require documented justification and approval.
@@ -66,11 +60,9 @@ Where applicable:
 - SHOULD constrain versions according to repository policy and preserve existing SBOM/provenance generation.
 - MUST NOT bypass security or supply-chain checks just to pass builds; exceptions require narrow, documented justification.
 
-## Verification and AI-assisted development
+## Security verification
 
-- MUST add or update tests for security-sensitive changes, including authorization, validation, and failure paths.
-- SHOULD run applicable SAST, secret, dependency, container, and IaC checks available in the project.
-- MUST investigate high-confidence findings introduced by a change; MUST NOT suppress findings without a specific documented justification.
-- MUST review and verify AI-generated or externally sourced code; adherence to these rules alone does not establish security.
-- MUST NOT share proprietary code, secrets, personal data, or protected internal context with unapproved external tools or services.
-- MUST preserve human review for material security decisions.
+- MUST verify security-sensitive changes with relevant authorization, validation, and failure-path tests.
+- SHOULD run applicable static analysis, secret, dependency, container, and IaC checks.
+- MUST investigate introduced high-confidence findings; suppressions require documented justification.
+- MUST review externally sourced code before use.

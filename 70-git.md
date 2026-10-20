@@ -1,9 +1,3 @@
----
-name: Git and Collaboration Rules
-alwaysApply: true
-description: Lightweight Git workflow with worktrees, issues, Kanban, PRs/MRs, documentation, architecture, releases, and CI/CD.
----
-
 # Git and Collaboration Rules
 
 ## Repository navigation
@@ -34,7 +28,6 @@ description: Lightweight Git workflow with worktrees, issues, Kanban, PRs/MRs, d
 - SHOULD deliver changes through PRs/MRs rather than directly to long-living branches.
 - MUST link issues and explain scope, rationale, actual verification, risks, and breaking changes.
 - MUST respect reviews, required CI checks, branch protection, and merge strategy.
-- MUST NOT claim tests, reviews, approvals, or updates that did not occur.
 - SHOULD update the related issues and board as work progresses and after merge.
 
 ## Documentation and architecture
@@ -55,12 +48,5 @@ description: Lightweight Git workflow with worktrees, issues, Kanban, PRs/MRs, d
 
 - MUST keep CI/CD configuration version-controlled, discoverable, and aligned with the documented build and release workflow.
 - MUST preserve required automated checks (tests, linting, builds, security/policy checks where configured) for PRs/MRs and releases.
-- MUST NOT bypass failing checks or protections merely to merge or deploy.
 - SHOULD automate reproducible builds, tagged releases, and deployment promotion using the project's approved pipeline.
 - MUST make build, review, release, and deployment status distinguishable so the board does not imply a delivery stage that has not occurred.
-
-## Workflow hygiene
-
-- MUST NOT commit secrets, credentials, or unrelated generated artifacts.
-- SHOULD keep processes minimal and avoid duplicating policies already defined in security, testing, or IaC rules.
-- MUST report unavailable tracker, CI, or board updates instead of inventing their completion.

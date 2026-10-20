@@ -1,9 +1,3 @@
----
-name: Architecture and Design Rules
-alwaysApply: false
-description: Apply when introducing or changing modules, services, APIs, persistence boundaries, cross-cutting concerns, dependencies, or architectural structure.
----
-
 # Architecture and Design Rules
 
 ## Preserve architectural intent
@@ -12,7 +6,7 @@ description: Apply when introducing or changing modules, services, APIs, persist
 - MUST preserve established architectural boundaries unless the task explicitly requires changing them.
 - SHOULD align new code with the dominant local pattern rather than introducing a second competing pattern.
 - MUST document or clearly report a material architectural deviation.
-- SHOULD introduce the c4 model to show or display the current architecture
+- SHOULD document significant architecture using suitable C4 views and record consequential decisions in ADRs.
 
 ## Modularity
 
@@ -61,7 +55,6 @@ When calling another process, service, queue, database, or external API:
 ## Configuration
 
 - SHOULD externalize environment-specific configuration.
-- MUST NOT use configuration flags to bypass fundamental authorization or security controls.
 - SHOULD keep configuration typed, validated, and documented where supported.
 - MUST provide safe defaults when a default is appropriate.
 
@@ -70,7 +63,6 @@ When calling another process, service, queue, database, or external API:
 - SHOULD expose enough structured diagnostics to operate and debug the system.
 - SHOULD make failures observable at the boundary where they can be acted upon.
 - MUST NOT use logging as a substitute for error handling.
-- MUST follow security and privacy rules for logs, traces, and metrics.
 
 ## Architecture changes
 
@@ -82,21 +74,6 @@ A material architecture change SHOULD include the project's normal architecture-
 - new cross-cutting security mechanism
 - new shared framework or foundational dependency
 - a deliberate exception to an established architecture rule
-
-## Anti-patterns
-
-MUST NOT introduce without a demonstrated need:
-
-- god classes or god modules
-- circular dependencies
-- mutable global state
-- generic abstractions with no concrete reuse
-- deep inheritance hierarchies for ordinary business logic
-- duplicated business rules across layers
-- hidden network or database calls in apparently pure helpers
-- framework-specific types leaking through unrelated domain boundaries
-- broad "utils" modules used as dumping grounds
-- new distributed services solely to avoid modularizing an existing application
 
 ## Design preference
 
