@@ -7,7 +7,7 @@ These rules guide engineering decisions; they do not replace qualified legal, pr
 - MUST follow applicable documented legal, contractual, regulatory, organizational, and repository requirements.
 - MUST preserve required approval, review, audit, retention, and change-control processes.
 - MUST surface missing, conflicting, or ambiguous requirements when they materially affect implementation; MUST NOT invent legal obligations, retention periods, or certification levels.
-- MUST NOT claim compliance or formal approval based solely on generated code or AI assessments.
+- MUST NOT claim compliance or formal approval without appropriate evidence and authorized review.
 
 ## Privacy & Data Governance
 
