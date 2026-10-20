@@ -1,9 +1,3 @@
----
-name: Testing and Verification Rules
-alwaysApply: true
-description: Framework-agnostic, risk-based testing and verification across application code, APIs, infrastructure, and integrations.
----
-
 # Testing and Verification Rules
 
 ## Strategy & Scope
