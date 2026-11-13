@@ -14,5 +14,8 @@ Framework- and tool-independent guidelines for maintainable, secure software. **
 | [50-iac.md](50-iac.md) | Infrastructure and CI/CD |
 | [60-compliance.md](60-compliance.md) | Privacy, licensing, governance |
 | [70-git.md](70-git.md) | Git, collaboration, documentation, releases |
+| [80-agent-skills.md](80-agent-skills.md) | First-party Skill selection, invocation and security |
+
+Reviewed Agent Skills are optional workflows, not replacements for these Rules. See [Skill routing](80-agent-skills.md). Do not automatically install or invoke unknown Skills.
 
 Background references: [SOURCES.md](SOURCES.md).
