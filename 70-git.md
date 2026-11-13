@@ -43,6 +43,8 @@
 - MUST document upgrade or migration steps for breaking changes where applicable.
 - MUST follow the project's versioning scheme and use traceable release tags; SHOULD prefer annotated or signed tags where supported.
 - MUST keep tags, release notes, changelog, and published version metadata consistent; MUST NOT silently overwrite existing releases.
+- Before deploying **changed code or a new artifact**, MUST check the project's existing version/release policy and determine whether a version bump is required; MUST identify the intended version and immutable source/artifact revision. SHOULD prepare the version and changelog before releasing a substantial feature, and MUST keep applicable manifests, metadata, release notes and tags consistent before publication. MUST NOT impose SemVer when a different approved convention is used.
+- MUST distinguish a new software release from promoting or redeploying an **identical artifact** or rolling back: these retain the artifact's original software version, with the deployment event recorded separately. MUST NOT create/move tags or deploy without the required explicit approval.
 
 ## CI/CD and delivery
 
