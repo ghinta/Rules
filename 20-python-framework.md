@@ -1,3 +1,7 @@
+---
+applyTo: "**/*.py,**/*.pyi,**/pyproject.toml,**/uv.lock"
+---
+
 # Python Development Rules
 
 ## Standards & Tooling
